@@ -13,12 +13,12 @@ li, a, button {
     color: #edf0f1;
     text-decoration: none;
 }
-
 .logo {
     cursor: pointer;
     width: 5em;
     margin-left: 5em;
 }
+
 .logo:hover {
     background-color:#f4b731;
     border-radius:50%;
