@@ -1,0 +1,212 @@
+@import url('https://font.googleleapis.com/css?family=montserrat:500');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+li, a, button {
+    font-family: "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    /* order: 1; */
+    width: 5em;
+    margin-left: 5em;
+}
+.logo:hover {
+    background-color:#f4b731;
+    border-radius:50%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px 10px; */
+    margin: 0;
+}
+hr {
+    border-color: #f4b731;
+}
+.nav__links {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+nav {
+    order: 1;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #f4b731;
+}
+
+.cta {
+    order: 2;
+    font-weight: bold;
+}
+
+button {
+    padding: 9px 25px;
+    /* background-color: #24252A; */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: #f4b731;
+    color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*,*::before,::after{
+ box-sizing: border-box;   
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 400;
+}
+
+body{
+    background: #e5e5e5;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+/* cards */
+h1 {
+    cursor: pointer;
+    font-size: clamp(50px, 2vw, 90px);
+    color: rgb(253, 252, 252);
+    text-transform: uppercase;
+    margin: 0em;
+    padding: 1em 0em 1em 0em;
+    transition: 0.3s linear;
+}
+h1:hover{
+    color:#f4b731;
+    transition: 0.3s linear;
+}
+.cards {
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.card {
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    max-width: 150px;
+    min-height: 500px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url(../images/ginger.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: max-width 1s ease-in-out;
+    -webkit-transition: max-width 1s ease-in-out;
+    -moz-transition: max-width 1s ease-in-out;
+    -ms-transition: max-width 1s ease-in-out;
+    -o-transition: max-width 1s ease-in-out;
+}
+.card:nth-of-type(2) {
+    background-image: url(../images/capri.jpg);
+}
+.card:nth-of-type(3) {
+    background-image: url(../images/honey.jpg);
+}
+.card:nth-of-type(4) {
+    background-image: url(../images/maltdrink.jpg);
+}
+.card:hover{
+    max-width: 700px;
+}
+
+.card-body{
+    background: linear-gradient(180deg, rgb(45, 45, 45, 0) 0%, #2d2d2d 100%);
+    padding: 3em;
+}
+
+.title{
+    background: linear-gradient(180deg, rgb(45, 45, 45, 0) 0%, #2d2d2d 100%);
+    position: absolute;
+    inset: 0;
+}
+
+.card:hover .title{
+    all: unset;
+}
+
+h2{
+    font-size: clamp(38px, 5vw, 48px);
+    color:#fffbfb;
+    background:none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+    transform: rotate(-90deg) translateX(-350px);
+    -webkit-transform: rotate(-90deg) translateX(-350px);
+    -moz-transform: rotate(-90deg) translateX(-350px);
+    -ms-transform: rotate(-90deg) translateX(-350px);
+    -o-transform: rotate(-90deg) translateX(-350px);
+}
+
+.card:hover h2 {
+    padding-bottom: 0.5em;
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+}
+
+p {
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    background:none;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out;
+    -webkit-transition: max-height 0.3s ease-in-out;
+    -moz-transition: max-height 0.3s ease-in-out;
+    -ms-transition: max-height 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out;
+}
+
+.card:hover p {
+    position: relative;
+    opacity: 1;
+    max-height: 100%;
+    transition-delay: 0.3s;
+}
+/* end cards */
