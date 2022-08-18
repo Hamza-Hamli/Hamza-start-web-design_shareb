@@ -16,7 +16,6 @@ li, a, button {
 
 .logo {
     cursor: pointer;
-    /* order: 1; */
     width: 5em;
     margin-left: 5em;
 }
@@ -102,6 +101,8 @@ h1 {
     margin: 0em;
     padding: 1em 0em 1em 0em;
     transition: 0.3s linear;
+    display: flex;
+    justify-content: center;
 }
 h1:hover{
     color:#f4b731;
@@ -111,6 +112,7 @@ h1:hover{
     flex-wrap: wrap;
     gap: 2em;
     padding: 2em 0;
+    justify-content: center;
 }
 
 .card {
