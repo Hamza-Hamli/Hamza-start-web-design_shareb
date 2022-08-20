@@ -1,11 +1,11 @@
 @import url('https://font.googleleapis.com/css?family=montserrat:500');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: #24252A;
 }
-
 li, a, button {
     font-family: "Arial", sans-serif;
     font-weight: 500;
@@ -17,11 +17,13 @@ li, a, button {
     cursor: pointer;
     width: 5em;
     margin-left: 5em;
+    transition: 0.3s 0.1s;
 }
 
 .logo:hover {
     background-color:#f4b731;
     border-radius:50%;
+    transition: 0.3s 0s;
 }
 
 header {
@@ -35,28 +37,27 @@ header {
 hr {
     border-color: #f4b731;
 }
-.nav__links {
+.nav-links {
     list-style: none;
     display: inline-block;
     padding: 0px 20px;
+    order: 2;
+    font-weight: bold;
+    transition: 0.3s ease 2s;
 }
 
-nav {
+.nav-links li a:hover {
+    color: #f4b731;
+    transition: all 0.3s ease 0s;
+}
+.nav-links {
     order: 1;
 }
 
-.nav__links li a {
+/* .nav-links li a {
     transition: all 0.3s ease 0s;
-}
+} */
 
-.nav__links li a:hover {
-    color: #f4b731;
-}
-
-.cta {
-    order: 2;
-    font-weight: bold;
-}
 
 button {
     padding: 9px 25px;
@@ -64,35 +65,28 @@ button {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0.1s;
 }
 
 button:hover {
     background-color: #f4b731;
     color: black;
+    transition: all 0.3s ease 0.1s;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *,*::before,::after{
- box-sizing: border-box;   
- font-family: 'Montserrat', sans-serif;
- font-weight: 400;
-}
-
-body{
-    background: #e5e5e5;
-    margin: 0;
-}
-
-.row {
-    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .container {
     max-width: 90%;
     margin: 0 auto;
 }
+
 /* cards */
+
 h1 {
     cursor: pointer;
     font-size: clamp(50px, 2vw, 90px);
@@ -104,18 +98,34 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
 h1:hover{
     color:#f4b731;
     transition: 0.3s linear;
 }
-.cards {
+
+.all-cards {
+    display: flex;
     flex-wrap: wrap;
     gap: 2em;
     padding: 2em 0;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
-.card {
+.card-body{
+    background: linear-gradient(180deg, rgb(45, 45, 45, 0) 0%, #2d2d2d 100%);
+    padding: 3em;
+}
+
+.card-body:hover {
+    transition: max-width 1s ease-in-out;
+    /* -webkit-transition: max-width 1s ease-in-out;
+    -moz-transition: max-width 1s ease-in-out;
+    -ms-transition: max-width 1s ease-in-out;
+    -o-transition: max-width 1s ease-in-out; */
+}
+.single-card {
+    display: flex;
     align-items: flex-end;
     justify-content: center;
     position: relative;
@@ -124,37 +134,44 @@ h1:hover{
     text-align: center;
     overflow: hidden;
     cursor: pointer;
-    background-image: url(../images/ginger.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
-    -webkit-border-radius: 25px;
+    /* -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    transition: max-width 1s ease-in-out;
-    -webkit-transition: max-width 1s ease-in-out;
-    -moz-transition: max-width 1s ease-in-out;
-    -ms-transition: max-width 1s ease-in-out;
-    -o-transition: max-width 1s ease-in-out;
-}
-.card:nth-of-type(2) {
-    background-image: url(../images/capri.jpg);
-}
-.card:nth-of-type(3) {
-    background-image: url(../images/honey.jpg);
-}
-.card:nth-of-type(4) {
-    background-image: url(../images/maltdrink.jpg);
-}
-.card:hover{
-    max-width: 700px;
+    -o-border-radius: 25px; */
+    transition: all 2s ease;
+    transition: max-width 2s ease-in-out;
+    /* -webkit-transition: max-width 2s ease-in-out;
+    -moz-transition: max-width 2s ease-in-out;
+    -ms-transition: max-width 2s ease-in-out;
+    -o-transition: max-width 2s ease-in-out; */
 }
 
-.card-body{
-    background: linear-gradient(180deg, rgb(45, 45, 45, 0) 0%, #2d2d2d 100%);
-    padding: 3em;
+.single-card:nth-of-type(1) {
+    background-image: url(./images/ginger.jpg)
+}
+
+.single-card:nth-of-type(2) {
+    background-image: url(../images/capri.jpg);
+}
+.single-card:nth-of-type(3) {
+    background-image: url(../images/honey.jpg);
+}
+.single-card:nth-of-type(4) {
+    background-image: url(../images/maltdrink.jpg);
+}
+
+.single-card:hover{
+    max-width: 700px;
+    transition: all 2s ease;
+    transition: max-width 2s ease-in-out;
+    /* -webkit-transition: max-width 2s ease-in-out;
+    -moz-transition: max-width 2s ease-in-out;
+    -ms-transition: max-width 2s ease-in-out;
+    -o-transition: max-width 2s ease-in-out; */
 }
 
 .title{
@@ -163,7 +180,7 @@ h1:hover{
     inset: 0;
 }
 
-.card:hover .title{
+.single-card:hover .title{
     all: unset;
 }
 
@@ -175,19 +192,21 @@ h2{
     white-space: nowrap;
     margin: 0;
     transform: rotate(-90deg) translateX(-350px);
-    -webkit-transform: rotate(-90deg) translateX(-350px);
+    /* -webkit-transform: rotate(-90deg) translateX(-350px);
     -moz-transform: rotate(-90deg) translateX(-350px);
     -ms-transform: rotate(-90deg) translateX(-350px);
-    -o-transform: rotate(-90deg) translateX(-350px);
+    -o-transform: rotate(-90deg) translateX(-350px); */
+    transition: all 0.3s ease;
 }
 
-.card:hover h2 {
+.single-card:hover h2 {
     padding-bottom: 0.5em;
     transform: unset;
     -webkit-transform: unset;
     -moz-transform: unset;
     -ms-transform: unset;
     -o-transform: unset;
+    transition: all 2s ease;
 }
 
 p {
@@ -199,16 +218,20 @@ p {
     max-height: 0;
     opacity: 0;
     transition: max-height 0.3s ease-in-out;
-    -webkit-transition: max-height 0.3s ease-in-out;
+    /* -webkit-transition: max-height 0.3s ease-in-out;
     -moz-transition: max-height 0.3s ease-in-out;
     -ms-transition: max-height 0.3s ease-in-out;
-    -o-transition: max-height 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out; */
+    transform: rotate(-90deg) translateX(-350px);
+    transition: all 0s ease;
 }
 
-.card:hover p {
+.single-card:hover p {
     position: relative;
     opacity: 1;
     max-height: 100%;
-    transition-delay: 0.3s;
+    /* transition-delay: 0.3s; */
+    transform: unset;
+    transition: all 2s ease;
 }
 /* end cards */
